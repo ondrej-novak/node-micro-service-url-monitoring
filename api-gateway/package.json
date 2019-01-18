@@ -1,0 +1,41 @@
+{
+  "name": "api-gateway",
+  "version": "1.0.0",
+  "description": "A node.js app that runs inside a docker contianer but lives outside",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "nodemon dist/index.js",
+    "build": "npm run ts:build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts:build": "rimraf dist && tsc -p tsconfig.build.json"
+  },
+  "keywords": [
+    "docker",
+    "nodejs"
+  ],
+  "author": "Ondrej Novak <ondrej.novak3@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^8.10.39",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
+    "rimraf": "^2.6.2",
+    "ts-node": "3.3.0",
+    "tslint": "^5.10.0",
+    "typedoc": "^0.14.1",
+    "typescript": "^2.5.2"
+  },
+  "dependencies": {
+    "@types/restify": "^7.2.7",
+    "basic-auth-connect": "^1.0.0",
+    "cors": "^2.8.5",
+    "fastify": "^1.13.4",
+    "fastify-auth": "^0.3.0",
+    "fastify-jwt": "^0.9.1",
+    "fastify-reply-from": "^0.5.4",
+    "helmet": "^3.15.0",
+    "k-fastify-gateway": "^1.1.1",
+    "restana": "^2.7.0",
+    "stream-to-array": "^2.3.0"
+  }
+}

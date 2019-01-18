@@ -1,0 +1,43 @@
+{
+   "name": "jbl-endpoint-monitoring",
+   "version": "0.0.1",
+   "description": "Test Endpoint Monitoring application.",
+   "keywords": [
+      "nodejs",
+      "restify",
+      "typescript",
+      "mysql",
+      "typeorm"
+   ],
+   "scripts": {
+      "build": "rimraf bin && tsc",
+      "start": "ts-node src/index.ts",
+      "start-server": "node bin/index.js"
+   },
+   "license": "ISC",
+   "devDependencies": {
+      "@types/node": "^8.0.29",
+      "nodemon": "^1.18.9",
+      "ts-node": "3.3.0",
+      "typedoc": "^0.14.1",
+      "typescript": "2.5.2"
+   },
+   "dependencies": {
+      "@types/node-cron": "^2.0.0",
+      "@types/request": "^2.48.1",
+      "@types/request-promise-native": "^1.0.15",
+      "@types/restify": "^7.2.7",
+      "@types/restify-errors": "^4.3.3",
+      "@types/underscore": "^1.8.9",
+      "mysql": "^2.14.1",
+      "node-cron": "^2.0.3",
+      "reflect-metadata": "^0.1.10",
+      "request": "^2.88.0",
+      "request-promise-native": "^1.0.5",
+      "restify": "^7.4.0",
+      "restify-errors": "^6.1.1",
+      "rimraf": "^2.6.3",
+      "string_decoder": "^1.2.0",
+      "typeorm": "0.2.11"
+   }
+}
