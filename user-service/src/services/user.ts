@@ -13,7 +13,7 @@ class UserService {
         newUser.name = user.name;
         newUser.email = user.email;
         newUser.accessToken = user.accessToken;
-        newUser.monitoredEndpoints = user.monitoredEndpoints;           
+        newUser.monitoredEndpoint = user.monitoredEndpoint;           
 
         const connection = await DatabaseProvider.getConnection();
         return await connection.getRepository(User).save(newUser);
@@ -32,7 +32,7 @@ class UserService {
         userToModify.name = user.name;
         userToModify.email = user.email;
         userToModify.accessToken = user.accessToken;
-        userToModify.monitoredEndpoints = user.monitoredEndpoints;       
+        userToModify.monitoredEndpoint = user.monitoredEndpoint;       
 
         return await repository.save(userToModify);
     }

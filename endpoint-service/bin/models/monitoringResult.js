@@ -26,7 +26,7 @@ __decorate([
     __metadata("design:type", Number)
 ], MonitoringResult.prototype, "status", void 0);
 __decorate([
-    typeorm_1.Column({ type: "nvarchar", length: "MAX" }),
+    typeorm_1.Column({ name: "payload" }),
     __metadata("design:type", String)
 ], MonitoringResult.prototype, "payload", void 0);
 __decorate([
@@ -34,7 +34,7 @@ __decorate([
     __metadata("design:type", monitoredEndpoint_1.MonitoredEndpoint)
 ], MonitoringResult.prototype, "monitoredEndpointId", void 0);
 MonitoringResult = __decorate([
-    typeorm_1.Entity("monitoringResult")
+    typeorm_1.Entity()
 ], MonitoringResult);
 exports.MonitoringResult = MonitoringResult;
 //# sourceMappingURL=monitoringResult.js.map

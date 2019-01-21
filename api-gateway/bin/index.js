@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const toArray = require('stream-to-array');
 const fastify = require("fastify");
 const gateway = fastify({});
 gateway.register(require('fastify-reply-from'));
@@ -13,7 +12,7 @@ gateway.register(require('k-fastify-gateway'), {
         {
             prefix: '/api',
             prefixRewrite: '',
-            target: 'http://localhost:3001',
+            target: 'http://localhost:8081',
             middlewares: [],
             hooks: {
                 async onRequest(request, reply) {
@@ -25,7 +24,7 @@ gateway.register(require('k-fastify-gateway'), {
         {
             prefix: '/users',
             prefixRewrite: '',
-            target: 'http://localhost:3002',
+            target: 'http://localhost:8082',
             middlewares: [],
             hooks: {}
         }

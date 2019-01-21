@@ -3,7 +3,7 @@ import { ApiServer } from './server/index';
 import { DatabaseProvider } from './database/index';
 
 var dbport = 3306;
-var port = 3001;
+var port = 8081;
 // if (typeof(process.env.DATABASE_PORT)!=='undefined')
 //     dbport = +process.env.DATABASE_PORT;
 

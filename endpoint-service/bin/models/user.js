@@ -32,7 +32,7 @@ __decorate([
 __decorate([
     typeorm_1.OneToMany(type => monitoredEndpoint_1.MonitoredEndpoint, monitoredEndpoint => monitoredEndpoint.user),
     __metadata("design:type", Array)
-], User.prototype, "monitoredEndpoints", void 0);
+], User.prototype, "monitoredEndpoint", void 0);
 User = __decorate([
     typeorm_1.Entity("user")
 ], User);

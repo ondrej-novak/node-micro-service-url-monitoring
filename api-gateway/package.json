@@ -5,7 +5,7 @@
   "main": "bin/index.js",
   "scripts": {
     "start": "nodemon bin/index.js",
-    "build": "npm run ts:bin",
+    "build": "npm run ts:build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "ts:build": "rimraf bin && tsc -p tsconfig.build.json"
   },

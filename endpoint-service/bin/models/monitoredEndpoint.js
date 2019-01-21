@@ -46,11 +46,11 @@ __decorate([
     __metadata("design:type", Boolean)
 ], MonitoredEndpoint.prototype, "isRunning", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => user_1.User, user => user.monitoredEndpoints),
+    typeorm_1.ManyToOne(type => user_1.User, user => user.monitoredEndpoint),
     __metadata("design:type", user_1.User)
 ], MonitoredEndpoint.prototype, "user", void 0);
 MonitoredEndpoint = __decorate([
-    typeorm_1.Entity("monitoredEndpoint")
+    typeorm_1.Entity()
 ], MonitoredEndpoint);
 exports.MonitoredEndpoint = MonitoredEndpoint;
 //# sourceMappingURL=monitoredEndpoint.js.map

@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, ManyToOne, Column } from "typeorm";
 import { User } from "./user";
 
-@Entity("monitoredEndpoint")
+@Entity()
 export class MonitoredEndpoint {
     
     @PrimaryGeneratedColumn()
@@ -28,7 +28,7 @@ export class MonitoredEndpoint {
     @Column({name: "is_running" })
     public isRunning: boolean;
     
-    @ManyToOne(type => User, user => user.monitoredEndpoints)
+    @ManyToOne(type => User, user => user.monitoredEndpoint)
     public user: User;
     
 }

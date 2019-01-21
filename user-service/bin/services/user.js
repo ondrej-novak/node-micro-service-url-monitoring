@@ -64,7 +64,7 @@ var UserService = /** @class */ (function () {
                         newUser.name = user.name;
                         newUser.email = user.email;
                         newUser.accessToken = user.accessToken;
-                        newUser.monitoredEndpoints = user.monitoredEndpoints;
+                        newUser.monitoredEndpoint = user.monitoredEndpoint;
                         return [4 /*yield*/, database_1.DatabaseProvider.getConnection()];
                     case 1:
                         connection = _a.sent();
@@ -105,7 +105,7 @@ var UserService = /** @class */ (function () {
                         userToModify.name = user.name;
                         userToModify.email = user.email;
                         userToModify.accessToken = user.accessToken;
-                        userToModify.monitoredEndpoints = user.monitoredEndpoints;
+                        userToModify.monitoredEndpoint = user.monitoredEndpoint;
                         return [4 /*yield*/, repository.save(userToModify)];
                     case 3: return [2 /*return*/, _a.sent()];
                 }

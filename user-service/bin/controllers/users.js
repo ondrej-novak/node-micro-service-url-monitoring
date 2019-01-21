@@ -48,9 +48,9 @@ var UsersController = /** @class */ (function () {
     function UsersController() {
     }
     UsersController.prototype.initialize = function (httpServer) {
-        httpServer.get('/', this.list.bind(this));
-        httpServer.get('/:id', this.getById.bind(this));
-        httpServer.post('/', this.create.bind(this));
+        httpServer.get('/users', this.list.bind(this));
+        httpServer.get('/users/:id', this.getById.bind(this));
+        httpServer.post('/users', this.create.bind(this));
     };
     UsersController.prototype.list = function (req, res) {
         return __awaiter(this, void 0, void 0, function () {

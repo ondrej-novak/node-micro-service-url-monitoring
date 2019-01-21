@@ -5,9 +5,9 @@ import { userService } from '../services/user';
 
 export class UsersController implements Controller {
     public initialize(httpServer: HttpServer): void {
-        httpServer.get('/', this.list.bind(this));
-        httpServer.get('/:id', this.getById.bind(this));
-        httpServer.post('/', this.create.bind(this));        
+        httpServer.get('/users', this.list.bind(this));
+        httpServer.get('/users/:id', this.getById.bind(this));
+        httpServer.post('/users', this.create.bind(this));        
     }
 
     private async list(req: Request, res: Response): Promise<void> {

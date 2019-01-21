@@ -17,6 +17,6 @@ export class User {
     public accessToken: string;
 
     @OneToMany(type => MonitoredEndpoint, monitoredEndpoint => monitoredEndpoint.user)
-    public monitoredEndpoints: MonitoredEndpoint[];
+    public monitoredEndpoint: MonitoredEndpoint[];
     
 }

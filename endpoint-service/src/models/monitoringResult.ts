@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, ManyToOne, Column } from "typeorm";
 import { MonitoredEndpoint } from "./monitoredEndpoint";
 
-@Entity("monitoringResult")
+@Entity()
 export class MonitoringResult {
     
     @PrimaryGeneratedColumn()
@@ -13,7 +13,7 @@ export class MonitoringResult {
     @Column()
     public status: number;
 
-    @Column({type: "nvarchar", length: "MAX"})
+    @Column({name: "payload"})
     public payload: string;
     
     @ManyToOne(type => MonitoredEndpoint, monitoredEndpoint => monitoredEndpoint.id)

@@ -28,7 +28,6 @@ export class MonitoredEndpoint {
     @Column({name: "is_running" })
     public isRunning: boolean;
     
-    @ManyToOne(type => User, user => user.monitoredEndpoints)
-    public user: User;
-    
+    @ManyToOne(type => User, user => user.monitoredEndpoint)
+    public user: User;    
 }

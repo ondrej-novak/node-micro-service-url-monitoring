@@ -47,7 +47,7 @@ var MonitoredEndpoint = /** @class */ (function () {
         __metadata("design:type", Boolean)
     ], MonitoredEndpoint.prototype, "isRunning", void 0);
     __decorate([
-        typeorm_1.ManyToOne(function (type) { return user_1.User; }, function (user) { return user.monitoredEndpoints; }),
+        typeorm_1.ManyToOne(function (type) { return user_1.User; }, function (user) { return user.monitoredEndpoint; }),
         __metadata("design:type", user_1.User)
     ], MonitoredEndpoint.prototype, "user", void 0);
     MonitoredEndpoint = __decorate([

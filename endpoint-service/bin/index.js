@@ -4,7 +4,7 @@ require("reflect-metadata");
 const index_1 = require("./server/index");
 const index_2 = require("./database/index");
 var dbport = 3306;
-var port = 3001;
+var port = 8081;
 // if (typeof(process.env.DATABASE_PORT)!=='undefined')
 //     dbport = +process.env.DATABASE_PORT;
 // if (typeof(process.env.PORT)!=='undefined')
