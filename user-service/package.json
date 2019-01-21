@@ -10,9 +10,9 @@
       "typeorm"
    ],
    "scripts": {
-      "build": "rimraf build && tsc",
+      "build": "rimraf bin && tsc",
       "start": "ts-node src/index.ts",
-      "start-server": "node build/index.js"
+      "start-server": "node bin/index.js"
    },
    "license": "ISC",
    "devDependencies": {

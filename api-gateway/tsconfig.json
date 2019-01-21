@@ -11,7 +11,7 @@
         "strictNullChecks": true,
         "allowJs": true,
         "pretty": true,
-        "outDir": "dist",
+        "outDir": "bin",
         "lib": [
             "es2017",
             "dom"

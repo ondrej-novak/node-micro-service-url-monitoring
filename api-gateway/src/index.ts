@@ -1,7 +1,7 @@
 const toArray = require('stream-to-array')
-
 import * as fastify from 'fastify'
 import * as fp from 'fastify-plugin'
+import * as fs from 'fs'
 
 const gateway = fastify({})
 
@@ -26,6 +26,7 @@ gateway.register(require('k-fastify-gateway'), {
       middlewares: [                  
       ],
       hooks: {      
+        // TODO user authentication jwt
         async onRequest (request:any, reply:any) {
           // your validation logic
           console.log('AUTH: ' + reply.context.config.auth)
@@ -40,13 +41,27 @@ gateway.register(require('k-fastify-gateway'), {
       prefixRewrite: '',
       target: 'http://localhost:3002',
       middlewares: [
-        require('basic-auth-connect')('admin', 's3cr3t-pass')
+        // require('basic-auth-connect')('admin', 's3cr3t-pass')
       ],
       hooks: {
       }
     }
   ]
 })
+
+
+// This is where lazyloading magic for nodejs happens
+// fs.readdirSync(__dirname + '/user-service/dist').forEach(function (plugin) {
+
+//   plugin = plugin.replace('.js', '');
+
+//   // __defineGetter__ is a getter method which will be called if particluar
+//   // property (or submodule in our case) will be requested
+//   exports.__defineGetter__(plugin, function () {
+//     return require('./submodules/' + plugin);
+//   });
+
+// });
 
 // start the gateway HTTP server
 gateway.listen (8080).then(function(address:string){

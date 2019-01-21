@@ -2,12 +2,12 @@
   "name": "api-gateway",
   "version": "1.0.0",
   "description": "A node.js app that runs inside a docker contianer but lives outside",
-  "main": "dist/index.js",
+  "main": "bin/index.js",
   "scripts": {
-    "start": "nodemon dist/index.js",
-    "build": "npm run ts:build",
+    "start": "nodemon bin/index.js",
+    "build": "npm run ts:bin",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ts:build": "rimraf dist && tsc -p tsconfig.build.json"
+    "ts:build": "rimraf bin && tsc -p tsconfig.build.json"
   },
   "keywords": [
     "docker",
